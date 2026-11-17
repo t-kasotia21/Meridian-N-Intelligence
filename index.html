@@ -266,6 +266,7 @@ button.srcchip:hover{color:var(--violet);border-color:var(--violet)}
 .pf{display:grid;grid-template-columns:292px minmax(0,1fr) 322px;gap:16px;align-items:start}
 .pf.dec{grid-template-columns:minmax(0,1fr) 340px}
 .pf.dec > .side-col.list{display:none}
+.portfolio-company-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}.portfolio-card{--company:#6366f1;position:relative;overflow:hidden;padding:18px;border-top:5px solid var(--company);text-align:left;width:100%;transition:transform .15s,box-shadow .15s,border-color .15s}.portfolio-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);border-color:var(--company)}.portfolio-card-head{display:flex;align-items:center;gap:10px}.portfolio-card .mk{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:14px;background:var(--company)}.portfolio-card h3{font-size:17px}.portfolio-card .tagline{font-size:12.5px;color:var(--muted);line-height:1.5;margin:12px 0}.portfolio-card-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0}.portfolio-card-metrics div{background:color-mix(in srgb,var(--company) 7%,var(--surface));border-radius:9px;padding:9px}.portfolio-card-metrics b{display:block;font-size:15px}.portfolio-card-metrics span{display:block;font-size:10.5px;color:var(--muted);margin-top:2px}.portfolio-card-foot{display:flex;align-items:center;gap:7px;padding-top:12px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted)}.portfolio-card-foot .open{margin-left:auto;color:var(--company);font-weight:600;display:inline-flex;align-items:center;gap:4px}.portfolio-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);margin:4px 0 14px}.portfolio-legend span{display:inline-flex;align-items:center;gap:5px}.portfolio-legend i{width:9px;height:9px;border-radius:3px}.watch-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}.watch-card{display:flex;gap:10px;align-items:center;text-align:left;padding:13px 14px}.watch-card:hover{border-color:var(--accent-line)}.company-focus{max-width:1280px;margin:0 auto}.company-focus-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,.75fr);gap:16px;align-items:start}.company-focus-side{display:flex;flex-direction:column;gap:14px}.company-focus .focus-back{margin-bottom:14px}.company-band{height:6px;border-radius:14px 14px 0 0;background:var(--company)}
 .co-list{overflow:hidden}
 .co{display:flex;gap:11px;width:100%;text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);align-items:flex-start}
 .co:hover{background:var(--surface-2)}
@@ -279,6 +280,7 @@ button.srcchip:hover{color:var(--violet);border-color:var(--violet)}
 .deal{display:flex;gap:10px;align-items:center;width:100%;text-align:left;padding:10px 14px;border-top:1px solid var(--line);font-size:13px}
 .deal:hover{background:var(--surface-2)}
 .deal:first-of-type{border-top:0}
+@media (max-width:1050px){.portfolio-company-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.company-focus-grid{grid-template-columns:1fr}}@media (max-width:620px){.portfolio-company-grid{grid-template-columns:1fr}.portfolio-card-metrics{grid-template-columns:1fr 1fr}}
 .chdr{padding:18px 20px 0}
 .chdr .row1{display:flex;gap:14px;align-items:flex-start}
 .chdr .mk{width:44px;height:44px;border-radius:11px;display:grid;place-items:center;font-weight:700;font-size:17px;color:#fff;flex:none}
@@ -725,9 +727,11 @@ table.fin th{font-size:11.5px;color:var(--muted);font-weight:500}
 .mob-bar{display:flex;align-items:center;gap:12px;color:#e0e0f0;font-size:13px;margin-bottom:12px;width:100%;max-width:430px;justify-content:space-between}
 .mob-bar span{display:inline-flex;gap:6px;align-items:center}
 .mob-bar .btn{background:#fff;color:#111;border-color:#fff}
-.mob-frame{flex:1;width:100%;max-width:400px;max-height:860px;border-radius:38px;border:10px solid #111;box-shadow:0 30px 80px rgba(0,0,0,.6);overflow:hidden;background:#000}
-.mob-frame iframe{width:100%;height:100%;border:0;display:block}
-@media (max-width:600px){.mob-wrap{padding:0}.mob-bar{display:none}.mob-frame{max-width:none;max-height:none;border:0;border-radius:0}}
+.mob-frame{flex:1;width:100%;max-width:410px;max-height:860px;border-radius:38px;border:10px solid #111;box-shadow:0 30px 80px rgba(0,0,0,.6);overflow:hidden;background:#f7f7fb;color:#171722}
+.mobile-app{height:100%;display:flex;flex-direction:column;background:#f7f7fb;overflow:hidden}.mobile-head{padding:18px 18px 12px;background:#fff;border-bottom:1px solid #e5e5ee;display:flex;align-items:center;gap:10px}.mobile-head .logo{width:32px;height:32px}.mobile-head b{font-size:15px}.mobile-head small{display:block;color:#737386;font-size:11px}.mobile-head .iconbtn{margin-left:auto}
+.mobile-scroll{flex:1;overflow:auto;padding:16px 14px 90px}.mobile-welcome{margin-bottom:14px}.mobile-welcome h2{font-size:22px}.mobile-welcome p{font-size:12.5px;color:#69697a;margin-top:3px}.mobile-kpis{display:grid;grid-template-columns:1fr 1fr;gap:9px}.mobile-kpi{background:#fff;border:1px solid #e5e5ee;border-radius:14px;padding:12px}.mobile-kpi b{font-size:23px;display:block;line-height:1}.mobile-kpi span{font-size:11px;color:#717184;display:block;margin-top:5px}.mobile-section{margin-top:18px}.mobile-section-h{display:flex;align-items:center;margin-bottom:8px}.mobile-section-h h3{font-size:14px}.mobile-section-h span{margin-left:auto;font-size:11px;color:#77778b}.mobile-signal{width:100%;text-align:left;background:#fff;border:1px solid #e5e5ee;border-radius:14px;padding:12px;margin-bottom:8px;display:block}.mobile-signal .ms-meta{display:flex;align-items:center;gap:6px;margin-bottom:6px}.mobile-signal h4{font-size:13.5px;line-height:1.35}.mobile-signal p{font-size:11.5px;color:#717184;margin-top:5px}.mobile-bottom{position:absolute;left:10px;right:10px;bottom:10px;height:62px;background:#fff;border:1px solid #ddddea;border-radius:18px;box-shadow:0 8px 30px rgba(20,20,50,.14);display:grid;grid-template-columns:repeat(4,1fr);z-index:2}.mobile-bottom button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#747487;font-size:9.5px}.mobile-bottom button.on{color:#4f46e5}.mobile-bottom svg{width:18px;height:18px}.mob-frame{position:relative}
+@media (max-width:600px){.mob-wrap{padding:0}.mob-bar{display:none}.mob-frame{max-width:none;max-height:none;border:0;border-radius:0}.mobile-head{padding-top:calc(16px + env(safe-area-inset-top,0px))}.mobile-bottom{bottom:max(10px,env(safe-area-inset-bottom,0px))}}
+.mobile-kpi b.mobile-value{background:transparent;padding:0}
 
 .df-grid{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:16px;align-items:start}
 .df-kb{grid-template-columns:repeat(4,minmax(0,1fr))}
@@ -1322,7 +1326,10 @@ button.pr{cursor:pointer}button.pr:hover{background:var(--surface-2)}
 .dash-item:hover{text-decoration:none}.dash-item:hover h4{color:var(--accent)}.dash-item h4{font-size:13.5px;line-height:1.35}.dash-item p{font-size:11.5px;color:var(--muted);margin-top:4px}.dash-item .go{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:var(--surface-2);color:var(--muted)}
 .dash-item .go svg{width:14px;height:14px}
 .dash-note{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:12px;margin-top:10px}.dash-note svg{width:14px;height:14px}
+.investor-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:14px;margin-top:14px}.investor-panel{padding:18px}.investor-panel h3{font-size:15px}.metric-matrix{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:12px}.metric-cell{background:var(--surface);padding:13px 14px;display:flex;gap:10px;align-items:flex-start}.metric-cell .mi{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;flex:none}.metric-cell .mi svg{width:15px;height:15px}.metric-cell b{display:block;font-size:18px;line-height:1.1}.metric-cell span{display:block;color:var(--muted);font-size:11.5px;margin-top:3px}.readiness{margin-top:12px}.readiness-row{display:grid;grid-template-columns:110px minmax(0,1fr) 38px;gap:8px;align-items:center;padding:8px 0;border-top:1px solid var(--line);font-size:12px}.readiness-row:first-child{border-top:0}.readiness-bar{height:8px;background:var(--surface-2);border-radius:8px;overflow:hidden}.readiness-bar i{height:100%;display:block;border-radius:8px;background:var(--accent)}.readiness-row b{text-align:right;font-family:var(--f-mono);font-size:11.5px}.exposure-list{margin-top:10px}.exposure{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;padding:10px 0;border-top:1px solid var(--line)}.exposure:first-child{border-top:0}.exposure strong{font-size:13px}.exposure p{font-size:11.5px;color:var(--muted);margin-top:2px}.exposure .pill{align-self:start}
+.focused-signal{max-width:1120px;margin:0 auto}.focus-back{margin-bottom:14px}.focused-card{overflow:hidden}.focused-card .detail-h{position:static}.focus-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:16px 20px;border-bottom:1px solid var(--line);background:var(--surface-2)}.focus-summary>div{background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:12px}.focus-summary span{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);font-weight:600}.focus-summary b{display:block;font-size:14px;margin-top:4px;line-height:1.35}.focus-summary .urgent{background:var(--red-soft);border-color:color-mix(in srgb,var(--red) 20%,transparent)}.focus-summary .impact{background:var(--blue-soft);border-color:color-mix(in srgb,var(--blue) 20%,transparent)}.focus-summary .evidence{background:var(--green-soft);border-color:color-mix(in srgb,var(--green) 20%,transparent)}.focused-card .dsec:nth-of-type(1){background:color-mix(in srgb,var(--blue-soft) 50%,var(--surface))}.focused-card .dsec:nth-of-type(2){background:color-mix(in srgb,var(--amber-soft) 52%,var(--surface))}.focused-card .dsec:nth-of-type(5){background:color-mix(in srgb,var(--green-soft) 52%,var(--surface))}
 @media (max-width:1100px){.dash-kpis{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (max-width:760px){.dash-kpis,.dash-actions{grid-template-columns:1fr 1fr}}@media (max-width:520px){.dash-kpis,.dash-actions{grid-template-columns:1fr}}
+@media (max-width:900px){.investor-grid{grid-template-columns:1fr}.focus-summary{grid-template-columns:1fr}}@media (max-width:600px){.metric-matrix{grid-template-columns:1fr}.investor-panel{padding:14px}.readiness-row{grid-template-columns:92px minmax(0,1fr) 34px}}
 /* ===== Home dashboards, sign-up, linked flow ===== */
 .su{position:fixed;inset:0;z-index:300;background:var(--bg);overflow:auto;padding:max(20px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 32px max(16px,env(safe-area-inset-left,0px));display:flex;justify-content:center;align-items:flex-start}
 .su-in{width:100%;max-width:860px;margin-top:4vh;display:flex;flex-direction:column;gap:22px}
@@ -2128,7 +2135,7 @@ const STORE_KEY = "meridian-demo-v6";
 const DEFAULT_STATE = () => ({
   workspace:"fund", lens:"investor", signal:"bee", focus:"all", format:"all", window:"30",
   saved:["pi"], tracked:["wearables","warehouse","defense"],
-  company:"vexo", tab:"overview", decisionOpen:false, expanded:{}, meetings:[], meetTab:"pipeline", meetFilter:"all", view:"brief", trackTopic:"wearables", trackStage:2,
+  company:"vexo", companyFocused:false, tab:"overview", decisionOpen:false, expanded:{}, meetings:[], meetTab:"pipeline", meetFilter:"all", view:"brief", trackTopic:"wearables", trackStage:2,
   sf:{topic:"all", kind:"all", sel:"bee"}, hypTriage:{},
   evidence:{h02:[{id:"EV-1", date:"2026-11-02", src:"Desk research · Vexo privacy policy (Nov 1)", text:"The policy says the mic is always listening while the Band is on and asks users to get any consent the law requires. No feature for people near the wearer is described.", verdict:"weaken", crit:[]}], h01:[], h03:[]},
   decision:{status:"Needs Review", option:null, note:"", savedAt:null, reviewedAt:null},
@@ -3306,7 +3313,7 @@ function renderDetail(e){
       ${e.formats.map(f => `<span class="pill ${FORMAT_TONE[f]}">${ic(FORMAT_ICON[f])}${esc(f)}</span>`).join("")}
       <span class="pill ${CLASS_TONE[e.classification]}" title="Orchestrator classification">${ic("git-branch")}${esc(e.classification)}</span>
       <span class="sp"></span>
-      <button class="iconbtn detail-close" data-act="detail-close" aria-label="Close">${ic("x")}</button>
+      <button class="iconbtn detail-close" data-act="${S.focusedSignal?"focused-close":"detail-close"}" aria-label="Close">${ic("x")}</button>
     </div>
     <h2>${esc(e.headline)}</h2>
     <div style="margin:8px 0 10px">${chainStrip(e.id)}</div>
@@ -3314,6 +3321,12 @@ function renderDetail(e){
       <a class="btn sm" href="${e.url}" target="_blank" rel="noopener">${ic("external-link")}Original source</a>
       <button class="btn sm ${saved?"on":""}" data-act="save" data-id="${e.id}">${ic(saved?"bookmark-check":"bookmark")}${saved?"Saved":"Save"}</button>
     </div>
+  </div>
+
+  <div class="focus-summary" aria-label="Investor signal summary">
+    <div class="urgent"><span>Investor priority</span><b>${trgOf(e.id)==="ACT"?"Needs action now":trgOf(e.id)==="WATCH"?"Keep watching":"Context only"}</b></div>
+    <div class="impact"><span>Portfolio impact</span><b>${ls.length?`${ls.length} linked ${ls.length===1?"company or deal":"companies or deals"}`:"No direct portfolio link"}</b></div>
+    <div class="evidence"><span>Evidence coverage</span><b>${e.facts.length} verified facts · ${e.notVerified.length} open ${e.notVerified.length===1?"gap":"gaps"}</b></div>
   </div>
 
   <section class="dsec"><h4>${N()}What happened</h4>
@@ -3397,6 +3410,7 @@ function renderIntelligence(){
   const list = filteredEvents();
   const sel = evById(S.signal);
   const fmts = ALL_FORMATS.filter(f => EVENTS.filter(inWindow).some(e => e.formats.includes(f)));
+  if(S.focusedSignal && sel) return `<div class="focused-signal"><button class="btn focus-back" data-act="focused-close">${ic("arrow-left")}Back to Daily Brief</button><article class="card focused-card" id="detail">${renderDetail(sel)}</article></div>`;
   return `
   <div class="page-h" style="margin-bottom:14px">
     <div><h1>${founder()?"Market Intelligence for Vexo":"Market Intelligence"}</h1>
@@ -3636,41 +3650,33 @@ function renderPortfolio(){
     <div class="page-h"><div><div class="eyebrow">${ic("briefcase")}Portfolio Management</div><h1>Portfolio Management is part of the fund workspace</h1>
     <p>${founder()?"This is Meridian Seed Ventures’ private workspace. Founders can’t see it.":"Public readers can use News & Market Intelligence without any private data. Switch to the fund workspace to see Meridian Seed Ventures’ assumed holdings."}</p></div></div>
     <div class="card pad row wrap" style="gap:12px">${ic("lock")}<span>Private workspace</span><span class="sp"></span><button class="btn pri" data-act="ws" data-v="fund">${ic("building-2")}Switch to fund workspace</button><button class="btn" data-act="nav" data-to="intelligence">Back to Market Intelligence</button></div>`;
-  const st = portfolioStats();
-  const c = COMPANIES[S.company];
-  return `
-  <div class="page-h">
-    <div><div class="eyebrow">${ic("briefcase")}Portfolio Management · Meridian Seed Ventures</div><h1>Portfolio: invested and watching</h1>
-    <p>Public company facts, open fund questions and decisions, with market evidence attached where it is relevant.</p></div>
-    <span class="synthetic">${ic("flask-conical")}Assumed holdings · public data</span>
-  </div>
-  <div class="flow-legend" style="margin-bottom:16px"><span><b>1</b>Your companies<small>Invested or watching, and your stage in each.</small></span>${ic("arrow-right","arr")}<span><b>2</b>News and market signals<small>What changed on each, with the next step.</small></span>${ic("arrow-right","arr")}<span><b>3</b>Company workspace<small>Decisions, funding, sources and diligence.</small></span></div>
-  ${portfolioBoard()}
-  <section class="ov" aria-label="Portfolio overview" style="margin-top:22px">
-    <div class="card stat"><span class="ico t-accent">${ic("layout-grid")}</span><div><div class="v">${st.total}</div><div class="k">Portfolio companies</div><div class="s">Ultra, Gecko, Vexo (assumed)</div></div></div>
-    <div class="card stat"><span class="ico t-amber">${ic("flag")}</span><div><div class="v">${st.review}</div><div class="k">Require review</div><div class="s">${COMPANY_ORDER.filter(id=>COMPANIES[id].review==="Needs review").map(id=>esc(COMPANIES[id].name)).join(", ")||"None"}</div></div></div>
-    <div class="card stat"><span class="ico t-blue">${ic("message-square")}</span><div><div class="v">${st.reqs}</div><div class="k">Open fund questions</div><div class="s">Across all holdings</div></div></div>
-    <button class="card stat statbtn" data-act="df-open" data-tab="calendar"><span class="ico t-violet">${ic("calendar")}</span><div style="text-align:left"><div class="v">${st.meetings.length}</div><div class="k">Meetings, next 14 days</div><div class="s">Next: ${(()=>{const n=allMeetings().find(m=>m.date>=DEMO_TODAY); return n? fmtShort(n.date)+" · "+esc(meetEntity(n).name) : "none";})()} · View all</div></div></button>
-    <div class="card stat"><span class="ico ${st.mld?"t-accent":"t-green"}">${ic(st.mld?"link-2":"check-circle-2")}</span><div><div class="v">${st.mld}</div><div class="k">Market-linked decisions</div><div class="s">${st.mld?"D-1 needs partner input":"D-1 "+esc(S.decision.status.toLowerCase())}</div></div></div>
+  const st = portfolioStats(), c = COMPANIES[S.company];
+  if(S.companyFocused && c) return renderFocusedCompany(c);
+  return `<div class="page-h"><div><div class="eyebrow">${ic("briefcase")}Portfolio Management · Meridian Seed Ventures</div><h1>Portfolio overview</h1><p>One clear view of company health, investor attention, market exposure, and upcoming decisions.</p></div><span class="synthetic">${ic("flask-conical")}Assumed holdings · public data</span></div>
+  <section class="ov" aria-label="Portfolio overview">
+    <div class="card stat"><span class="ico t-accent">${ic("layout-grid")}</span><div><div class="v">${st.total}</div><div class="k">Invested companies</div><div class="s">Active portfolio</div></div></div>
+    <div class="card stat"><span class="ico t-amber">${ic("flag")}</span><div><div class="v">${st.review}</div><div class="k">Need review</div><div class="s">Investor attention</div></div></div>
+    <div class="card stat"><span class="ico t-blue">${ic("message-square")}</span><div><div class="v">${st.reqs}</div><div class="k">Open questions</div><div class="s">Across portfolio</div></div></div>
+    <button class="card stat statbtn" data-act="df-open" data-tab="calendar"><span class="ico t-violet">${ic("calendar")}</span><div style="text-align:left"><div class="v">${st.meetings.length}</div><div class="k">Upcoming meetings</div><div class="s">Next 14 days</div></div></button>
+    <div class="card stat"><span class="ico ${st.mld?"t-red":"t-green"}">${ic(st.mld?"git-pull-request":"check-circle-2")}</span><div><div class="v">${st.mld}</div><div class="k">Decision alerts</div><div class="s">${st.mld?"Partner input needed":"No open alert"}</div></div></div>
   </section>
-  <div class="pfb-h"><div><div class="eyebrow">${ic("folder-open")}Step 3 · Company workspace</div><h2>Decisions, funding and sources</h2></div></div>
-  <div class="pf ${S.decisionOpen && S.company===D1.company?"dec":""}">
-    <div class="side-col list" style="gap:14px">
-      <section class="card co-list" aria-label="Portfolio companies">
-        <div class="co-h"><h3>Portfolio companies</h3><span class="xs faint">${COMPANY_ORDER.length} assumed</span></div>
-        ${COMPANY_ORDER.map(id => coRow(COMPANIES[id])).join("")}
-      </section>
-      <section class="card co-list" aria-label="Active deals">
-        <div class="co-h"><h3>Watchlist</h3><span class="synthetic">Public info only</span></div>
-        ${Object.entries(DEALS).map(([id,d]) => `<button class="deal" data-act="deal" data-id="${id}"><span style="min-width:0;flex:1"><b style="font-weight:600">${esc(d.name)}</b><span class="xs muted" style="display:block">${esc(d.desc)}</span></span><span class="pill ${d.tone}">${esc(d.stage)}</span></button>`).join("")}
-      </section>
-    </div>
-    <section class="card" style="min-width:0" id="center" aria-label="${esc(c.name)}">
-      ${S.decisionOpen && S.company===D1.company ? renderDecision() : renderCompany(c)}
-    </section>
-    <div class="side-col">${renderRightCol(c)}</div>
-  </div>
-  <p class="foot-note">${ic("info")}<span>Ultra, Gecko Robotics and Vexo are real companies; the fund holding them is a demo assumption. Every company fact and document links to a public source, and no internal company data is shown. The fund, its people, tasks and meetings are fictional. Nothing is sent outside this page.</span></p>`;
+  <div class="sec-h" style="margin-top:24px"><div><h2 style="font-size:18px">Invested companies</h2><p class="small muted">Each color identifies a company across the workspace. Select a card for its dedicated page.</p></div><span class="pill t-line">${COMPANY_ORDER.length} companies</span></div>
+  <div class="portfolio-legend">${COMPANY_ORDER.map(id=>`<span><i style="background:${COMPANIES[id].color}"></i>${esc(COMPANIES[id].name)}</span>`).join("")}</div>
+  <section class="portfolio-company-grid">${COMPANY_ORDER.map(id=>portfolioCompanyCard(COMPANIES[id])).join("")}</section>
+  <div class="sec-h" style="margin-top:26px"><div><h2 style="font-size:18px">Investment watchlist</h2><p class="small muted">Companies being monitored before an investment decision.</p></div><span class="synthetic">Public information only</span></div>
+  <section class="watch-grid">${Object.entries(DEALS).map(([id,d])=>`<button class="card watch-card" data-act="deal" data-id="${id}"><span class="tile sm ${d.tone}">${ic("eye")}</span><span style="min-width:0;flex:1"><b>${esc(d.name)}</b><span class="xs muted" style="display:block">${esc(d.desc)}</span></span><span class="pill ${d.tone}">${esc(d.stage)}</span></button>`).join("")}</section>
+  <p class="foot-note">${ic("info")}<span>Company facts are based on public sources. Holdings, internal questions, tasks and meetings are demo assumptions.</span></p>`;
+}
+
+function portfolioCompanyCard(c){
+  const links=LINKS.filter(l=>l.kind==="portfolio"&&l.entity===c.id), action=links.filter(l=>trgOf(l.event)==="ACT").length;
+  const reqOpen=c.requests.filter(r=>r===D1.request?S.decision.status!=="Reviewed":REQUESTS[r].status==="Open").length;
+  const review=c.id===D1.company&&S.decision.status==="Reviewed"?"On track":c.review;
+  return `<button class="card portfolio-card" style="--company:${c.color}" data-act="company" data-id="${c.id}"><div class="portfolio-card-head"><span class="mk">${c.mk}</span><div><h3>${esc(c.name)}</h3><span class="xs muted">${esc(c.stage)} · YC ${esc(c.yc)}</span></div><span class="sp"></span><span class="pill ${reviewTone(review)}">${esc(review)}</span></div><p class="tagline">${esc(c.tagline)}</p><div class="portfolio-card-metrics"><div><b>${links.length}</b><span>Linked signals</span></div><div><b>${action}</b><span>Need action</span></div><div><b>${reqOpen}</b><span>Open questions</span></div><div><b>${fmtShort(c.milestoneDate)}</b><span>${esc(c.milestone)}</span></div></div><div class="portfolio-card-foot">${ic("clock")}<span>${esc(c.latest)}</span><span class="open">Open company ${ic("arrow-right")}</span></div></button>`;
+}
+
+function renderFocusedCompany(c){
+  return `<div class="company-focus" style="--company:${c.color}"><button class="btn focus-back" data-act="company-back">${ic("arrow-left")}Back to portfolio overview</button><div class="page-h"><div><div class="eyebrow">${ic("briefcase")}Portfolio company workspace</div><h1>${esc(c.name)}</h1><p>Company performance, investor questions, public updates, market signals, and recommended actions.</p></div><span class="pill ${reviewTone(c.review)}">${esc(c.review)}</span></div><div class="company-focus-grid"><section class="card" style="min-width:0"><div class="company-band"></div>${S.decisionOpen&&c.id===D1.company?renderDecision():renderCompany(c)}</section><aside class="company-focus-side">${renderRightCol(c)}</aside></div></div>`;
 }
 
 function coRow(c){
@@ -4238,6 +4244,13 @@ function meetCard(m){
     </div></div>`;
 }
 
+function renderMobileUI(){
+  const mine=myIndustries(), relevant=EVENTS.filter(e=>e.topics.some(t=>mine.includes(t))), act=relevant.filter(e=>trgOf(e.id)==="ACT"), watch=relevant.filter(e=>trgOf(e.id)==="WATCH");
+  const cards=[[act.length,"Needs action","t-red"],[watch.length,"Keep watching","t-amber"],[COMPANY_ORDER.length,"Portfolio companies","t-violet"],[PIPELINE.filter(r=>r.kind==="deal").length,"Active deals","t-green"]];
+  const stories=[...act,...watch].slice(0,5);
+  return `<div class="mobile-app"><header class="mobile-head"><span class="logo">${ic("compass")}</span><div><b>Meridian Intelligence</b><small>Investor dashboard</small></div><button class="iconbtn" data-act="mobile-close" aria-label="Close mobile preview">${ic("x")}</button></header><main class="mobile-scroll"><div class="mobile-welcome"><h2>Good morning, Alex.</h2><p>Your highest-priority investor signals and portfolio activity.</p></div><section class="mobile-kpis">${cards.map(([v,l,t])=>`<div class="mobile-kpi"><b class="mobile-value ${t}">${v}</b><span>${l}</span></div>`).join("")}</section><section class="mobile-section"><div class="mobile-section-h"><h3>Priority signals</h3><span>${stories.length} updates</span></div>${stories.map(e=>`<button class="mobile-signal" data-act="mobile-signal" data-id="${e.id}"><div class="ms-meta"><span class="pill ${TRG_TONE[trgOf(e.id)]}">${TRG_LBL[trgOf(e.id)]}</span><span class="xs faint">${fmtShort(e.date)}</span></div><h4>${esc(e.headline)}</h4><p>${esc(sfById[e.id]?.sum||e.significance[0])}</p></button>`).join("")}</section></main><nav class="mobile-bottom" aria-label="Mobile navigation"><button class="on" data-act="mobile-nav" data-to="home">${ic("layout-dashboard")}Home</button><button data-act="mobile-nav" data-to="intelligence">${ic("radar")}Signals</button><button data-act="mobile-nav" data-to="portfolio">${ic("briefcase")}Portfolio</button><button data-act="mobile-nav" data-to="dealflow">${ic("git-commit-horizontal")}Deals</button></nav></div>`;
+}
+
 function renderOverlay(){
   let h = "";
   if(S.drawer){
@@ -4369,7 +4382,7 @@ function renderOverlay(){
   }
   if(S.mobileView){
     h += `<div class="mob-wrap"><div class="mob-bar"><span>${ic("smartphone")}Mobile view · Market Intelligence</span><button class="btn sm" data-act="mobile-close">${ic("monitor")}Back to desktop</button></div>
-      <div class="mob-frame"><iframe src="mobile.html" title="Meridian mobile view"></iframe></div></div>`;
+      <div class="mob-frame">${renderMobileUI()}</div></div>`;
   }
   const ov = $("#overlay");
   const keepFrame = S.mobileView && ov.querySelector(".mob-wrap");
@@ -4580,6 +4593,28 @@ function dashboardStoryList(kind){
   </section>`;
 }
 
+function investorDecisionCenter(){
+  const next14 = allMeetings().filter(m => { const d=daysBetween(DEMO_TODAY,m.date); return d>=0 && d<=14; });
+  const openTasks = S.tasks.filter(t=>!t.done).length, doneTasks = S.tasks.filter(t=>t.done).length;
+  const linked = new Set(LINKS.map(l=>l.entity)).size, gaps = EVENTS.reduce((n,e)=>n+e.notVerified.length,0);
+  const cells = [
+    ["git-pull-request","t-red",S.decision.status==="Needs Review"?1:0,"Decisions needing review"],
+    ["calendar","t-violet",next14.length,"Meetings in next 14 days"],
+    ["list-checks","t-amber",openTasks,"Open follow-ups"],
+    ["link-2","t-blue",linked,"Companies with linked signals"],
+    ["bookmark","t-violet",S.saved.length,"Saved intelligence"],
+    ["help-circle","t-amber",gaps,"Evidence gaps to validate"],
+    ["check-circle-2","t-green",doneTasks,"Completed actions"],
+    ["shield-check","t-green",EVENTS.reduce((n,e)=>n+e.facts.length,0),"Verified facts captured"]
+  ];
+  const readiness = [["Market evidence",78],["Founder evidence",42],["Legal review",55],["IC preparation",68]];
+  const exposure = COMPANY_ORDER.map(id => { const c=COMPANIES[id], ls=LINKS.filter(l=>l.entity===id), act=ls.filter(l=>trgOf(l.event)==="ACT").length; return {c,n:ls.length,act}; }).sort((a,b)=>b.n-a.n);
+  return `<section class="investor-grid" aria-label="Investor decision center">
+    <div class="card investor-panel"><div class="sec-h"><div><h3>Investor decision center</h3><p class="xs muted">Metrics that affect diligence, portfolio support, and investment committee readiness</p></div><span class="pill ${statusTone(S.decision.status)}">${esc(S.decision.status)}</span></div><div class="metric-matrix">${cells.map(([i,t,v,l])=>`<div class="metric-cell"><span class="mi ${t}">${ic(i)}</span><div><b>${v}</b><span>${l}</span></div></div>`).join("")}</div></div>
+    <div class="card investor-panel"><div class="sec-h"><h3>Decision readiness</h3><span class="xs muted">D-1 · Vexo follow-on</span></div><div class="readiness">${readiness.map(([l,v])=>`<div class="readiness-row"><span>${l}</span><span class="readiness-bar"><i style="width:${v}%"></i></span><b>${v}%</b></div>`).join("")}</div><div class="divider"></div><div class="sec-h"><h3>Portfolio signal exposure</h3><span class="xs muted">Linked intelligence</span></div><div class="exposure-list">${exposure.map(x=>`<div class="exposure"><div><strong>${esc(x.c.name)}</strong><p>${x.n} linked signal${x.n===1?"":"s"}</p></div><span class="pill ${x.act?"t-red":"t-blue"}">${x.act?x.act+" action":"Monitoring"}</span></div>`).join("")}</div></div>
+  </section>`;
+}
+
 function renderHome(){
   const acct = S.account || {name: fund() ? "Alex Morgan" : "Haris Malik"}, first = acct.name.split(" ")[0];
   const mine = myIndustries(), relevant = EVENTS.filter(e => e.topics.some(t => mine.includes(t)));
@@ -4594,6 +4629,8 @@ function renderHome(){
   return `<div class="page-h"><div><div class="eyebrow">${ic("layout-dashboard")}Investor intelligence dashboard · Meridian Seed Ventures</div><h1>Good morning, ${esc(first)}.</h1><p>A clear view of market activity, urgency, portfolio exposure, and deal flow.</p></div><span class="pill t-green">${ic("refresh-cw")}Updated Nov 9, 2026</span></div>
   <section class="dash-kpis" aria-label="Key dashboard metrics">${kpis.map(([icon,tone,value,label]) => `<div class="card dash-kpi"><span class="ki ${tone}">${ic(icon)}</span><div><strong>${value}</strong><span>${label}</span></div></div>`).join("")}</section>
   ${pulseRow()}
+  ${investorDecisionCenter()}
+  <div style="margin-top:14px">${stageRail()}</div>
   <section class="dash-actions" aria-label="Signals requiring attention">${dashboardStoryList("ACT")}${dashboardStoryList("WATCH")}</section>
   <p class="dash-note">${ic("external-link")}Select any “Needs action” or “Keep watching” item to open the original article in a new browser tab.</p>`;
 }
@@ -4735,7 +4772,7 @@ function addTask(t){
 function goSignal(id){
   S.view = "feed";
   S.sf = Object.assign({topic:"all", kind:"all"}, S.sf||{}, {sel: EV2SF[id] || id, topic:"all", kind:"all"});
-  S.signal = id; S.detailOpen = true; S.focus = "all"; S.format = "all"; S.topicFilter = null;
+  S.signal = id; S.focusedSignal = id; S.detailOpen = false; S.focus = "all"; S.format = "all"; S.topicFilter = null;
   
   S.drawer = null; S.modal = null;
   if(route()!=="intelligence"){ location.hash = "intelligence"; } else render();
@@ -4744,7 +4781,7 @@ function goSignal(id){
 
 const ACTIONS = {
   theme: () => { const next = curTheme()==="dark" ? "light" : "dark"; document.documentElement.setAttribute("data-theme", next); try{ localStorage.setItem("meridian-theme", next); }catch(e){} toast(next==="dark"?"Dark mode":"Light mode", next==="dark"?"moon":"sun"); render(); },
-  nav: d => { S.drawer = null; if(d.to==="portfolio" && !fund()){ location.hash = "portfolio"; return; } location.hash = d.to; },
+  nav: d => { S.drawer = null; S.focusedSignal = null; if(d.to==="portfolio") S.companyFocused = false; if(d.to==="portfolio" && !fund()){ location.hash = "portfolio"; return; } location.hash = d.to; },
   ws: d => { const prev = S.workspace; S.workspace = d.v; if(S.account){ S.account.role = d.v==="fund"?"vc":"founder"; S.account.name = d.v==="fund"?"Alex Morgan":"Haris Malik"; S.homeSel = null; }
     if(d.v==="founder"){ S.lens = "founder"; S.sf.fcat = "all"; S.sf.sel = "bee"; S.trackStage = 2; } else if(prev==="founder"){ S.lens = "investor"; S.sf.topic = "all"; }
     toast(d.v==="fund" ? "VC view: Meridian Seed Ventures" : d.v==="founder" ? "Founder view: Vexo (demo role). Meridian’s internal notes are hidden" : "Public reader: private data hidden", d.v==="fund"?"building-2":d.v==="founder"?"rocket":"globe");
@@ -4765,7 +4802,7 @@ const ACTIONS = {
     if(d.c===FCO){ S.ir.extra = S.ir.extra || []; const q = "Diligence request: "+r.t; if(!irQs().includes(q)) S.ir.extra.push({q, src:null, date:DEMO_TODAY}); toast("Requested from Vexo through Investor Relations","send"); }
     else toast("Marked as requested","send"); addLog("Alex Morgan", "Requested "+r.t+" from "+coName(d.c)); render(); },
   "dd-done": d => { S.ddReq = S.ddReq || {}; S.ddReq[d.c] = S.ddReq[d.c] || {}; S.ddReq[d.c][d.id] = "done"; toast("Marked reviewed","check"); render(); },
-  "dd-goto-co": d => { S.company = d.c; S.tab = "overview"; S.decisionOpen = false; location.hash = "portfolio"; window.scrollTo(0,0); },
+  "dd-goto-co": d => { S.company = d.c; S.companyFocused = true; S.tab = "overview"; S.decisionOpen = false; location.hash = "portfolio"; window.scrollTo(0,0); },
   "dd-goto-df": d => { S.dfSel = d.c; S.dfTab = "pipeline"; location.hash = "dealflow"; window.scrollTo(0,0); },
   "ir-reuse": d => { const from = allIRQ().find(x=>x.key===d.from); S.irDraft = S.irDraft || {}; S.irDraft[d.k] = from.ans.text; toast("Earlier answer inserted. Edit before sending","sparkles"); render(); },
   "ir-answer-old": d => { const i = Number(d.i); const t = ($("#ans-"+i)||{}).value; if(!t || !t.trim()){ $("#ans-"+i)?.focus(); return; } S.ir.answers[i] = {text:t.trim(), date:DEMO_TODAY}; S.irEdit = null; toast("Answer sent to Meridian","send"); render(); },
@@ -4785,6 +4822,8 @@ const ACTIONS = {
   "clear-filters": () => { S.focus="all"; S.format="all"; S.topicFilter=null; S.window="14"; render(); },
   mobile: () => { S.mobileView = true; S.drawer = null; S.modal = null; render(); },
   "mobile-close": () => { S.mobileView = false; try{ sessionStorage.setItem("mm-dismissed","1"); }catch(e){} render(); },
+  "mobile-signal": d => { S.mobileView = false; goSignal(d.id); },
+  "mobile-nav": d => { S.mobileView = false; S.focusedSignal = null; if(d.to==="portfolio") S.companyFocused=false; location.hash = d.to; },
   "sf-sel": d => { S.sf.sel = d.id; render(); const pn = document.getElementById("sfpane"); if(pn){ pn.scrollTop = 0; if(window.innerWidth<1180) pn.scrollIntoView({behavior:"smooth",block:"start"}); } },
   "sf-help": d => { S.sfHelp = d.v==="1"; render(); },
   "sf-topic": d => { S.sf.topic = d.v; render(); },
@@ -4796,7 +4835,7 @@ const ACTIONS = {
   "hyp-act": d => { const h = hypById[d.id]; if(!hypProgress(h).ready) return; S.hypTriage[d.id] = "ACT"; addLog("Alex Morgan", `Moved ${h.code} to Needs action`); toast(`${h.code} moved to Needs action`,"arrow-up-circle"); render(); },
   "hyp-watch": d => { const h = hypById[d.id]; delete S.hypTriage[d.id]; addLog("Alex Morgan", `Moved ${h.code} back to Watching`); render(); },
   "hyp-tracker": d => { S.view = "tracker"; const hh = HYPS.find(x=>x.code===d.code); S.trackTopic = (hh&&hh.trackerTopic)||"wearables"; const tr = TRACKERS[S.trackTopic]; const i = tr.stages.findIndex(x=>x.hyps.includes(d.code)); S.trackStage = tr.stages.findIndex(x=>x.status==="current" && x.hyps.includes(d.code))>=0 ? tr.stages.findIndex(x=>x.status==="current") : Math.max(0,i); render(); window.scrollTo({top:0}); },
-  view: d => { S.view = d.v; render(); window.scrollTo({top:0}); },
+  view: d => { S.focusedSignal = null; S.view = d.v; render(); window.scrollTo({top:0}); },
   "track-topic": d => { S.trackTopic = d.v; render(); },
   "track-open": d => { S.trackTopic = d.v; S.trackStage = TRACKERS[d.v].stages.findIndex(x=>x.status==="current"); S.view = "tracker"; render(); window.scrollTo(0,0); },
   "track-stage": d => { S.trackStage = Number(d.i); render(); },
@@ -4810,7 +4849,8 @@ const ACTIONS = {
     S.shorts = {id, i}; render();
   },
   "sel-signal": d => { S.signal = d.id; S.detailOpen = true; S.trackMenu = null; render(); const det = document.getElementById("detail"); if(det) det.scrollTop = 0; },
-  "detail-close": () => { S.detailOpen = false; render(); },
+  "detail-close": () => { S.detailOpen = false; S.focusedSignal = null; render(); },
+  "focused-close": () => { S.focusedSignal = null; S.view = "brief"; render(); window.scrollTo({top:0,behavior:"smooth"}); },
   save: d => { const on = S.saved.includes(d.id); S.saved = on ? S.saved.filter(x => x!==d.id) : [...S.saved, d.id]; toast(on ? "Removed from saved signals" : "Saved signal", on?"bookmark-minus":"bookmark-check"); render(); },
   "track-menu": d => { S.trackMenu = S.trackMenu===d.id ? null : d.id; render(); },
   track: d => { const on = S.tracked.includes(d.topic); S.tracked = on ? S.tracked.filter(x => x!==d.topic) : [...S.tracked, d.topic]; toast(`${on?"Stopped tracking":"Tracking"}: ${TOPICS[d.topic].name}`, on?"bell-off":"bell-ring"); render(); },
@@ -4825,7 +4865,7 @@ const ACTIONS = {
   "pipe-jump": d => { S.meetTab = "pipeline"; S.pipeOpen = d.id; render(); },
   "meet-filter": d => { S.meetFilter = d.v; render(); },
   "meet-add-toggle": () => { S.addMeet = !S.addMeet; render(); },
-  "meet-decision": () => { S.drawer = null; S.company = D1.company; S.decisionOpen = true; location.hash === "#portfolio" ? render() : (location.hash = "portfolio"); },
+  "meet-decision": () => { S.drawer = null; S.company = D1.company; S.companyFocused = true; S.decisionOpen = true; location.hash === "#portfolio" ? render() : (location.hash = "portfolio"); },
   "prep-add": d => { const pk = ensurePrep(d.m, d.id); (DDQ[d.id]||[]).filter(x=>x.c===d.c).forEach(x => addPrepQ(d.m, Object.assign({src:d.id}, x))); toast(`Added to prep pack · ${pk.qs.length} question${pk.qs.length===1?"":"s"}`,"clipboard-list"); render(); },
   "prep-open": d => { S.drawer = null; prepOf(d.id); S.modal = "prep:"+d.id; render(); },
   "prep-test": d => { const q = S.prep[d.m].qs[Number(d.i)]; q.answer = FERN_TEST[q.q]; render(); },
@@ -4840,12 +4880,13 @@ const ACTIONS = {
   deal: d => { S.drawer = "deal:"+d.id; render(); },
   "close-overlay": () => { S.drawer = null; S.modal = null; render(); },
   expand: d => { const cur = S.expanded[d.k]; const isOpen = cur===undefined ? d.default==="open" : cur; S.expanded[d.k] = !isOpen; render(); },
-  impact: d => { S.company = D1.company; S.decisionOpen = true; S.tab = "overview"; addLog("Alex Morgan", "Opened D-1 from the "+(SHORT[d.id]?SHORT[d.id][0]:"market")+" signal"); location.hash = "portfolio"; window.scrollTo({top:0}); },
+  impact: d => { S.company = D1.company; S.companyFocused = true; S.decisionOpen = true; S.tab = "overview"; addLog("Alex Morgan", "Opened D-1 from the "+(SHORT[d.id]?SHORT[d.id][0]:"market")+" signal"); location.hash = "portfolio"; window.scrollTo({top:0}); },
   "goto-signal": d => goSignal(d.id),
-  "goto-company": d => { S.company = d.id; S.decisionOpen = false; S.tab="overview"; S.drawer = null; if(location.hash==="#portfolio") render(); else location.hash = "portfolio"; window.scrollTo({top:0}); },
-  "as-open": d => { if(d.k==="deal"){ S.dfSel = d.c; S.dfTab = "pipeline"; location.hash = "dealflow"; } else { S.company = d.c; S.tab = "overview"; S.decisionOpen = false; location.hash = "portfolio"; } window.scrollTo(0,0); },
-  "act-open": d => { const a = sfById[d.id].action; if(a.kind==="deal"){ S.dfSel = a.company; S.dfTab = "pipeline"; location.hash = "dealflow"; } else { S.company = a.company; S.tab = "overview"; S.decisionOpen = false; location.hash = "portfolio"; } window.scrollTo(0,0); },
-  company: d => { S.company = d.id; S.tab = "overview"; S.decisionOpen = false; render(); },
+  "goto-company": d => { S.company = d.id; S.companyFocused = true; S.decisionOpen = false; S.tab="overview"; S.drawer = null; if(location.hash==="#portfolio") render(); else location.hash = "portfolio"; window.scrollTo({top:0}); },
+  "as-open": d => { if(d.k==="deal"){ S.dfSel = d.c; S.dfTab = "pipeline"; location.hash = "dealflow"; } else { S.company = d.c; S.companyFocused = true; S.tab = "overview"; S.decisionOpen = false; location.hash = "portfolio"; } window.scrollTo(0,0); },
+  "act-open": d => { const a = sfById[d.id].action; if(a.kind==="deal"){ S.dfSel = a.company; S.dfTab = "pipeline"; location.hash = "dealflow"; } else { S.company = a.company; S.companyFocused = true; S.tab = "overview"; S.decisionOpen = false; location.hash = "portfolio"; } window.scrollTo(0,0); },
+  company: d => { S.company = d.id; S.companyFocused = true; S.tab = "overview"; S.decisionOpen = false; render(); window.scrollTo({top:0,behavior:"smooth"}); },
+  "company-back": () => { S.companyFocused = false; S.decisionOpen = false; render(); window.scrollTo({top:0,behavior:"smooth"}); },
   tab: d => { S.tab = d.v; render(); },
   "open-decision": () => { S.decisionOpen = true; render(); $("#center")?.scrollIntoView({block:"start", behavior:"smooth"}); },
   "close-decision": () => { S.decisionOpen = false; render(); },
