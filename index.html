@@ -3301,7 +3301,7 @@ function sigCard(e){
 
 function renderDetail(e){
   if(!e) return `<div class="card pad muted">Select a signal to see the analysis.</div>`;
-  const L = e.lenses[S.lens];
+  const L = (e.lenses && e.lenses[S.lens]) || {title:"", pts:[], q:""};
   const ls = linksFor(e.id);
   const saved = S.saved.includes(e.id);
   const lensName = {investor:"Investor",founder:"Startup Founder",operator:"Industry Operator"};
@@ -3410,7 +3410,7 @@ function renderIntelligence(){
   const list = filteredEvents();
   const sel = evById(S.signal);
   const fmts = ALL_FORMATS.filter(f => EVENTS.filter(inWindow).some(e => e.formats.includes(f)));
-  if(S.focusedSignal && sel) return `<div class="focused-signal"><button class="btn focus-back" data-act="focused-close">${ic("arrow-left")}Back to Daily Brief</button><article class="card focused-card" id="detail">${renderDetail(sel)}</article></div>`;
+  if(S.focusedSignal && sel) return `<div class="focused-signal"><button class="btn focus-back" data-act="focused-close">${ic("arrow-left")}Back to Daily Brief</button><article class="card focused-card" id="detail">${sfById[EV2SF[sel.id]] ? sfRenderSingle(sfById[EV2SF[sel.id]]) : renderDetail(sel)}</article></div>`;
   return `
   <div class="page-h" style="margin-bottom:14px">
     <div><h1>${founder()?"Market Intelligence for Vexo":"Market Intelligence"}</h1>
